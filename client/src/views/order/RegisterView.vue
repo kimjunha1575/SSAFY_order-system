@@ -13,11 +13,6 @@ const router = useRouter();
 const route = useRoute();
 const menus = ref([]);
 
-function fileChange(e) {
-    console.log(e.target.files);
-    file.value = e.target.files[0];
-}
-
 async function menuCreate() {
     if (!name.value || !description.value || !file.value) {
         alert("빈 값이 있습니다. 내용을 전부 작성해주세요.");
